@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF0BD7F1-EE0E-4CC4-9D2E-310F133BC519}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdoNetWindow</RootNamespace>
+    <AssemblyName>AdoNetWindow</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationRoot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationRoot.Designer.cs">
+      <DependentUpon>ApplicationRoot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCourseRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCourseRegistration.Designer.cs">
+      <DependentUpon>frmCourseRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudentAdd.Designer.cs">
+      <DependentUpon>frmStudentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSubjectAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubjectAdd.Designer.cs">
+      <DependentUpon>frmSubjectAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinMain.Designer.cs">
+      <DependentUpon>WinMain.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ApplicationRoot.resx">
+      <DependentUpon>ApplicationRoot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCourseRegistration.resx">
+      <DependentUpon>frmCourseRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudentAdd.resx">
+      <DependentUpon>frmStudentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubjectAdd.resx">
+      <DependentUpon>frmSubjectAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="WinMain.resx">
+      <DependentUpon>WinMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AdoNetWindow.Model\AdoNetWindow.Model.csproj">
+      <Project>{5a53fc2a-9f96-41a1-bcb2-645f6b53eafe}</Project>
+      <Name>AdoNetWindow.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AdoNetWindow.View\AdoNetWindow.View.csproj">
+      <Project>{a4f6dff0-792d-4efe-a72f-bf67c936467e}</Project>
+      <Name>AdoNetWindow.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppConfiguration\AppConfiguration.csproj">
+      <Project>{72316cda-42f3-4686-bfa4-081638d67b08}</Project>
+      <Name>AppConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AspNet\AdoNet.csproj">
+      <Project>{affea5d4-16f1-4fc8-a307-5492368cbf5f}</Project>
+      <Name>AdoNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Libs\Libs.csproj">
+      <Project>{f8c0f144-46c9-4256-b5db-461736589f09}</Project>
+      <Name>Libs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repositories\Repositories.csproj">
+      <Project>{da7c9677-8c36-40eb-a73b-de0bb76d987f}</Project>
+      <Name>Repositories</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
